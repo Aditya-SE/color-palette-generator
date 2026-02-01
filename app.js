@@ -3,6 +3,18 @@ const paletteContainer = document.querySelector(".palette-container");
 
 generateBtn.addEventListener("click",generatePalette);
 
+paletteContainer.addEventListener("click", function(e){
+    if (e.target.classList.contains("copy-btn")){
+        const hexValue = e.target.previousElementSibling.textContent;
+
+        navigator.clipboard.writeText(hexValue)
+        .then(() => showCopySuccess())
+        .catch((err) => console.log(err))
+    }
+});
+
+
+
 function generatePalette(){
     const colors = [];
     for(let i = 0; i < 5 ; i++){
