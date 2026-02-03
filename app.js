@@ -8,12 +8,33 @@ paletteContainer.addEventListener("click", function(e){
         const hexValue = e.target.previousElementSibling.textContent;
 
         navigator.clipboard.writeText(hexValue)
-        .then(() => showCopySuccess())
+        .then(() => showCopySuccess(e.target))
         .catch((err) => console.log(err))
+    }else if(e.target.classList.contains("color")){
+        const hexValue = e.target.nextElementSibling.querySelector(".hex-value").textContent;
+        navigator.clipboard.writeText(hexValue)
+        .then(() => showCopySuccess(e.target.nextElementSibling.querySelector(".copy-btn")))
+        .catch((err) => console.log(err))
+
     }
+
 });
 
+function showCopySuccess(element){
+    
+    element.classList.remove("fa-copy");
+    element.classList.remove("far");
+    element.classList.add("fa-solid","fa-check");
+    
+    element.style.color = "#48bb78";
 
+    setTimeout(()=>{
+        element.classList.remove("fa-solid","fa-check");
+        element.classList.add("far","fa-copy");
+        element.style.color ="";
+    },1500);
+
+}
 
 function generatePalette(){
     const colors = [];
