@@ -3,8 +3,6 @@
 
 A simple and interactive web application that generates random color palettes and allows users to easily copy HEX color codes with a single click.
 
----
-
 ## 🚀 Features
 
 - Generate random color palettes instantly  
@@ -15,16 +13,12 @@ A simple and interactive web application that generates random color palettes an
 - Clean and modern UI  
 - Smooth hover and click effects  
 
----
-
 ## 🛠 Technologies Used
 
 - **HTML5** – Structure of the application  
 - **CSS3** – Styling and responsive design  
 - **JavaScript (Vanilla JS)** – Core functionality  
 - **Font Awesome** – Icons for UI interactions  
-
----
 
 ## 📂 Project Structure
 
@@ -34,3 +28,11 @@ Color-Palette-Generator/
 ├── style.css → Styling for the application
 ├── app.js → JavaScript logic
 └── README.md → Project documentation
+
+📱 Responsive Design
+
+The layout automatically adapts to:
+- Mobile screens
+- Tablets
+- Desktop browsers
+**Using CSS Grid and media queries**
