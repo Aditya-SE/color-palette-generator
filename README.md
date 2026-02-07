@@ -21,14 +21,14 @@ A simple and interactive web application that generates random color palettes an
 - **Font Awesome** – Icons for UI interactions  
 
 ## 📂 Project Structure
-
+```
 Color-Palette-Generator/
 │
 ├── index.html → Main HTML file
 ├── style.css → Styling for the application
 ├── app.js → JavaScript logic
 └── README.md → Project documentation
-
+```
 📱 Responsive Design
 
 The layout automatically adapts to:
